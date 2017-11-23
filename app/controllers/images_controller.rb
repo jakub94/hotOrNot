@@ -10,6 +10,7 @@ class ImagesController < ApplicationController
   # GET /images/1
   # GET /images/1.json
   def show
+    @ratings = @image.ratings
   end
 
   # GET /images/new

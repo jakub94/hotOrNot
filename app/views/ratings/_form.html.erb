@@ -16,6 +16,7 @@
     <%= form.text_field :value, id: :rating_value %>
   </div>
 
+  <input type="hidden"  name="image_id" value="<%= @image.id %>" />
   <div class="actions">
     <%= form.submit %>
   </div>
