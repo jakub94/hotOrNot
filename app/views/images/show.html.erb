@@ -17,6 +17,6 @@
       <% end %>
 
 </p>
-<%= link_to('Add Rating', new_rating_path(image_id: @image))  %>
+<%= link_to('Add Rating', new_rating_path(image_id: @image), id: 'add-rating-link')%>
 <%= link_to 'Edit', edit_image_path(@image) %> |
 <%= link_to 'Back', images_path %>
