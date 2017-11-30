@@ -16,6 +16,7 @@ describe Image do
   it 'creates answer with the correct poll id' do
       visit image_path(@image)
       # note that i've introduced an id here to make the test less brittle
+      # save_and_open_page
       click_on 'add-rating-link'
       expect(page).to have_content "New Rating for #{@image.title}"
       fill_in 'Value', with: '12'
