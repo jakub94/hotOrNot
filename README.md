@@ -1,7 +1,7 @@
 # README
 
-M1 Mediaprogamming - Web Technology
+M1 Media Programming - Web Technology
 
-https://travis-ci.org/jakub94/hotOrNot.svg?branch=master
+[![Build Status](https://travis-ci.org/jakub94/hotOrNot.svg?branch=master)](https://travis-ci.org/jakub94/hotOrNot)
 
 Jakub Müller s0544832/ David Schmöcker s0544655
