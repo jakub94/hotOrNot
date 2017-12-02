@@ -13,7 +13,7 @@ describe Image do
     expect(page).to have_content "New Rating for #{@image.title}"
   end
 
-  it 'creates answer with the correct poll id' do
+  it 'creates rating that adds correctly to images total rating' do
       visit image_path(@image)
       # note that i've introduced an id here to make the test less brittle
       # save_and_open_page
