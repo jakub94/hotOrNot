@@ -1,24 +1,7 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+M1 Mediaprogamming - Web Technology
 
-Things you may want to cover:
+https://travis-ci.org/jakub94/hotOrNot.svg?branch=master
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Jakub Müller s0544832/ David Schmöcker s0544655
