@@ -24,6 +24,4 @@ describe Image do
       expect { click_on 'Create Rating' }.to change { @image.ratings.count }.by(1)
       expect(page).to have_content('12')
     end
-
-
 end

@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Feed</strong>
+</p>
+
+<section id="mainSection">
+  <% @imageRatings.each do |image, totalRating| %>
+    <section id="imageSection_<%= image.id %>" class="imageSection">
+      <h3> <%= image.title %></h3>
+      <img id = "image_<%= image.id %>"class="petImage" src="<%= image.url %>" style='width: 500px' alt="<%= image.title %>">
+      <p> Total rating: <%= totalRating %></p>
+      <p> Created at: <%= image.created_at %></p>
+    </section>
+  <% end %>
+</section>
