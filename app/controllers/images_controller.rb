@@ -73,3 +73,7 @@ class ImagesController < ApplicationController
       params.require(:image).permit(:title, :url)
     end
 end
+
+def report
+  @image.reported_count += 1;  
+end
