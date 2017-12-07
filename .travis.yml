@@ -1,6 +1,14 @@
 language: ruby
 rvm:
-  - 2.4
+- 2.4
 script:
-  - bundle exec rspec spec
- 
+- bundle exec rspec spec
+deploy:
+  provider: heroku
+  api_key:
+    secure: WcAlSW9cx2GsiCaTKIXr+7Y7FzCTDQd38ixpYU6jG66Y2Yni/Qj2PrfneBFbWdUOZ/NnTHKkh8/xAWJxopbD+zMWyzkDhgWyPAFIZ9PVfp2fBdqknqQMimvJ4Syf+deOaBtrPnBwSUs4pwXvQrcyy7UE6etBEhI5j765/SN57SBgO4sUBnAPDH7HhoJB+EQF3hlH9P516IUZ5+l4iYG2dK4ElgtnQ9B5EV6VxWNQX5xEI7NSN4nrcrHeEMjWPRzsUuIX2MgPXaOlIZZiT4Wr4sittEChn0avDqKSGdx0658FD6a+K1Ld8Wb7Y/WU3UGLR34Sma5UFVaoW/3RAVF2K5SQ70awJ7oEUNPVHpf9l6nC/UguA7lSbsdhdVDUaGvsU22faN18AxcV4d0vEw4kGlg87HbvPcEEIIRjHQCzrHU78QkaaZqjHWqLI+V9sNy/fnuYEHAueCR/BF19xewxMcVCjJkNZgeeyLYJwecrB/TyRAOVMbsy7Y2wTe+eCYazK176kpccG8V+D6rtGpAaTJefuT+W9ZlXRJEq+5cENXyIjloNHdLR/jwspgIw3BK/YRL1Y5yGLNQOATqZ0vIduxiv4+VvtF78a83RsGVJ24tEGcOHNf8mS4c05FqLSXbEEVvg7PqwGstbGVZ3fO7IPin81vW0ONHEtHTNtRU+RTg=
+  app: hot-or-not-pets
+
+  run:
+    - "rake db:migrate"
+    - "rake cleanup"
