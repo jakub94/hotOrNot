@@ -75,5 +75,5 @@ class ImagesController < ApplicationController
 end
 
 def report
-  @image.reported_count += 1;  
+  @image.reported_count += 1;   
 end
