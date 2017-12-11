@@ -40,14 +40,9 @@ class ImagesController < ApplicationController
 
   # GET /images/1/report
   def report
-    #@image.reported_count += 1
-
     @image.increment(:reported_count)
-
     @image.save
-
-    #flash[:notice] = "GAGA"
-
+    render nothing: true
   end
   # PATCH/PUT /images/1
   # PATCH/PUT /images/1.json
