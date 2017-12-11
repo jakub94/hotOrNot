@@ -1,5 +1,5 @@
 class ImagesController < ApplicationController
-  before_action :set_image, only: [:show, :edit, :update, :destroy]
+  before_action :set_image, only: [:show, :edit, :update, :destroy, :report]
 
   # GET /images
   # GET /images.json
@@ -38,6 +38,17 @@ class ImagesController < ApplicationController
     end
   end
 
+  # GET /images/1/report
+  def report
+    #@image.reported_count += 1
+
+    @image.increment(:reported_count)
+
+    @image.save
+
+    #flash[:notice] = "GAGA"
+
+  end
   # PATCH/PUT /images/1
   # PATCH/PUT /images/1.json
   def update
@@ -72,8 +83,4 @@ class ImagesController < ApplicationController
     def image_params
       params.require(:image).permit(:title, :url)
     end
-end
-
-def report
-  @image.reported_count += 1;   
 end

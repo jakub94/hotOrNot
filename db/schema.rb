@@ -12,6 +12,11 @@
 
 ActiveRecord::Schema.define(version: 20171207200458) do
 
+  create_table "feeds", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "images", force: :cascade do |t|
     t.string "title"
     t.string "url"

@@ -11,8 +11,10 @@
       <img id = "image_<%= image.id %>"class="petImage" src="<%= image.url %>" style='width: 500px' alt="<%= image.title %>">
       <p> Total rating: <%= totalRating %></p>
       <p> Created at: <%= image.created_at %></p>
-      <p>Reported: <%= image.reported_count %></p>
-      <button><strong><%= link_to 'report'%></strong></button>
+      <p> Reported: <%= image.reported_count %></p>
+      <button>
+        <strong><%= link_to 'Report', report_image_path(image)%></strong>
+      </button>
     </section>
   <% end %>
 </section>

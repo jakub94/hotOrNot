@@ -16,9 +16,13 @@
       <tr>
         <td><%= image.title %></td>
         <td><%= image.url %></td>
-        <td><%= link_to 'Show', image %></td>
+        <td>
+          <%= image.reported_count %>
+        </td>
+        <td><%= link_to 'Showd', image %></td>
         <td><%= link_to 'Edit', edit_image_path(image) %></td>
         <td><%= link_to 'Destroy', image, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Report', report_image_path(image) %> </td>
       </tr>
     <% end %>
   </tbody>
