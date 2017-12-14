@@ -14,7 +14,7 @@
       <p> Total rating: <%= totalRating %></p>
       <p> Created at: <%= image.created_at %></p>
       <p class="reported_count"> Reported: <%= image.reported_count %></p>
-      <button class="button_report" onclick="report()">
+      <button class="button_report">
         <strong><%= link_to 'Report', report_image_path(image)%></strong>
       </button>
     </section>
