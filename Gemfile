@@ -15,6 +15,7 @@ end
 
 group :production do
   gem 'pg'
+  gem 'jquery-rails' 
 end
 
 # Use Puma as the app server
@@ -48,6 +49,7 @@ group :development, :test do
   gem 'launchy'
   gem 'rspec-rails', '~> 3.7'
   gem 'selenium-webdriver'
+  gem 'jquery-rails'
 end
 
 group :development do
