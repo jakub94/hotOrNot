@@ -10,7 +10,9 @@
   <% @imageRatings.each do |image, totalRating| %>
     <section id="imageSection_<%= image.id %>" class="imageSection">
       <h3> <%= image.title %></h3>
-      <img id = "image_<%= image.id %>"class="petImage" src="<%= image.url %>" style='width: 500px' alt="<%= image.title %>">
+      <a href="/images/<%= image.id %>">
+        <img id = "image_<%= image.id %>"class="petImage" src="<%= image.url %>" style='width: 500px' alt="<%= image.title %>">
+      </a>
       <p> Total rating: <%= totalRating %></p>
       <p> Created at: <%= image.created_at %></p>
       <p class="reported_count"> Reported: <%= image.reported_count %></p>

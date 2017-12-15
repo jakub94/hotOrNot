@@ -42,7 +42,6 @@ class ImagesController < ApplicationController
   def report
     @image.increment(:reported_count)
     @image.save
-    render nothing: true
   end
   # PATCH/PUT /images/1
   # PATCH/PUT /images/1.json
